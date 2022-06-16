@@ -81,6 +81,6 @@ jobs:
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"mikaelnet_SonarQubeExperiments" /o:"mikaelnet" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
           echo $Env:GITHUB_WORKSPACE
           echo $Env:HOME
-          dir
-          rem "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" "$Env:GITHUB_WORKSPACE\SonarQubeExperiments.sln" /p:Configuration=Release
+          ls
+          # "C:\Program Files (x86)\Microsoft Visual Studio\2019\Enterprise\MSBuild\Current\Bin\MSBuild.exe" "$Env:GITHUB_WORKSPACE\SonarQubeExperiments.sln" /p:Configuration=Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
