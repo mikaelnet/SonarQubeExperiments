@@ -15,7 +15,7 @@ namespace SonarQubeExperiments
         T GetAncestorOrSelf<T>() where T : IModelWrapper;
     }
 
-    public class ModelWrapperBase : IModelWrapper
+    public abstract class ModelWrapperBase : IModelWrapper
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
